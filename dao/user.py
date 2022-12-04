@@ -31,7 +31,7 @@ class UserDAO:
         user.surname = user_d.get("surname")
         user.password = user_d.get("password")
         user.email = user_d.get("email")
-        user.favorite_genre = user_d("favorite_genre")
+        user.favorite_genre = user_d.get("favorite_genre")
 
         self.session.add(user)
         self.session.commit()
